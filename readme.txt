@@ -47,16 +47,13 @@ A Wordpress plugin to show an animated slider on pages via shortcode or widget
 
 Slider is a custom post type to post your slides and shows them on page via shortcode or widgets.
 
-= Where is slides default image? =
+= Where is default image of slides? =
 
 Slide default image is featured image in slide.
 
 == Screenshots ==
 
-1. My Slider shortcode in editing page
-2. My Slider shortcode on page
-3. My Slider widget in widgets panel
-4. My Slider widget on homepage
+1. My Slider with nav buttons and bullets
 
 == Changelog ==
 
