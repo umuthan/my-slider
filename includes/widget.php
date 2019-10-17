@@ -47,6 +47,7 @@ class my_slider_widget extends WP_Widget {
       $animation = $instance[ 'animation' ];
       $number = $instance[ 'number' ];
       $imageStyle = $instance[ 'image_style' ];
+      $pause = $instance[ 'pause_on_hover' ];
     } else {
       $title = __( 'Slider', 'my-slider' );
       $bullets = 'yes';
@@ -55,6 +56,7 @@ class my_slider_widget extends WP_Widget {
       $animation = 'fade';
       $number = -1;
       $imageStyle = 'large';
+      $pause = 'yes';
     }
     // Widget admin form
     echo '<p>
@@ -141,6 +143,12 @@ class my_slider_widget extends WP_Widget {
       echo '>'.$key.'</option>';
     }
     echo '</select>
+    </p>
+    <p>
+    <label for="'.$this->get_field_id( 'pause_on_hover' ).'">'.__( 'Pause on hover:', 'my-slider' ).'</label>
+    <input type="checkbox" class="widefat" id="'.$this->get_field_id( 'pause_on_hover' ).'" name="'.$this->get_field_name( 'pause_on_hover' ).'" value="yes"';
+    if(esc_attr($pause)=='yes') echo ' checked';
+    echo '>
     </p>';
   }
 
@@ -154,6 +162,7 @@ class my_slider_widget extends WP_Widget {
     $instance['animation'] = ( ! empty( $new_instance['animation'] ) ) ? strip_tags( $new_instance['animation'] ) : '';
     $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
     $instance['image_style'] = ( ! empty( $new_instance['image_style'] ) ) ? strip_tags( $new_instance['image_style'] ) : '';
+    $instance['pause_on_hover'] = ( ! empty( $new_instance['pause_on_hover'] ) ) ? strip_tags( $new_instance['pause_on_hover'] ) : '';
 
     return $instance;
   }

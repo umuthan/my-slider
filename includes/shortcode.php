@@ -11,12 +11,13 @@ function my_slider_my_slides_shortcode($atts) {
       image-style: image style for slide images (default: large)
   */
   $attributes = shortcode_atts( array(
-    'bullets'     => 'yes',
-    'nav-buttons' => 'yes',
-    'timer'       => '5000',
-    'animation'   => 'fade',
-    'number'      => -1,
-    'image-style' => 'large',
+    'bullets'        => 'yes',
+    'nav-buttons'    => 'yes',
+    'timer'          => '5000',
+    'animation'      => 'fade',
+    'number'         => -1,
+    'image-style'    => 'large',
+    'pause-on-hover' => 'yes',
   ), $atts, 'my-slider' );
 
   /* Get references */
@@ -26,7 +27,8 @@ function my_slider_my_slides_shortcode($atts) {
               $attributes['timer'],
               $attributes['animation'],
               $attributes['number'],
-              $attributes['image-style']);
+              $attributes['image-style'],
+              $attributes['pause-on-hover']);
 
   return $output;
 }

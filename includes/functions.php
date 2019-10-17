@@ -29,9 +29,9 @@ function my_slider_get_all_image_sizes() {
 
 /**
  * Get posts of slider
- * bullets='true' nav-buttons='true' timer='5000' animation='fade' number='-1' image-style='large'
+ * bullets='true' nav-buttons='true' timer='5000' animation='fade' number='-1' image-style='large' pause-on-hover='yes'
  */
-function my_slider_get_slider($bullets, $navButtons, $timer, $animation, $number, $imageStyle) {
+function my_slider_get_slider($bullets, $navButtons, $timer, $animation, $number, $imageStyle, $pause) {
   $args = array(
     'numberposts' => $number,
     'post_type'   => 'slide'
@@ -56,6 +56,8 @@ function my_slider_get_slider($bullets, $navButtons, $timer, $animation, $number
   else if($animation == 'scale-out') $output .= 'animInFromLeft:scale-in-down; animInFromRight:scale-in-up; animOutToLeft:scale-out-down; animOutToRight:scale-out-up;';
   else if($animation == 'spin') $output .= 'animInFromLeft:spin-in-ccw; animInFromRight:spin-in; animOutToLeft:spin-out; animOutToRight:spin-out-ccw;';
   else if($animation == 'spin-ccw') $output .= 'animInFromLeft:spin-in; animInFromRight:spin-in-ccw; animOutToLeft:spin-out-ccw; animOutToRight:spin-out;';
+
+  if($pause == 'no') $output .= ' pauseOnHover:false;';
   $output .= '">
   <div class="orbit-wrapper">';
 

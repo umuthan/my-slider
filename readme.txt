@@ -4,7 +4,7 @@ Donate link: http://umuthan.com/
 Tags: custom post type, slider, slide, widget, shortcode, orbit
 Requires at least: 4.0
 Tested up to: 5.2
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 Requires PHP: 5.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -19,7 +19,7 @@ A Wordpress plugin to show an animated slider on pages via shortcode or widget
 
 ## Shortcode:
 
-[my-slider bullets='true' nav-buttons='true' timer='5000' animation='fade' number='-1' image-style='large']
+[my-slider bullets='true' nav-buttons='true' timer='5000' animation='fade' number='-1' image-style='large' pause-on-hover='yes']
 
 ### Shortcode Attributes:
 
@@ -34,6 +34,8 @@ A Wordpress plugin to show an animated slider on pages via shortcode or widget
 **number**: number of slider to show
 
 **image-style**: image style for slide images
+
+**pause-on-hover**: pause on hover slider
 
 == Installation ==
 
@@ -57,11 +59,17 @@ Slide default image is featured image in slide.
 
 == Changelog ==
 
+= 1.1.0 =
+* pause on hover attribute added
+
 = 1.0.0 =
 * slider custom post type added
 * widget and shortcode defined to show slides
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Slider pause on hover feature added
 
 = 1.0.0 =
 Slider post type added, widget and shortcode defined.

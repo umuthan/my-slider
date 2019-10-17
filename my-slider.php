@@ -11,7 +11,7 @@
  * Plugin Name:       My Slider
  * Plugin URI:        https://wordpress.org/plugins/my-slider/
  * Description:       Animated Slider for your Wordpress Site
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 4.0
  * Requires PHP:      5.0
  * Author:            Umuthan Uyan
